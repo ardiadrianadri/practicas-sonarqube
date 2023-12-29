@@ -13,6 +13,18 @@ services:
       - 9000
     networks:
       - sonar
+  jenkins-local:
+    image: jenkins/jenkins:lts-jdk17
+    volumes:
+      - /Users/aferreres/projects/personal/jenkins:/var/jenkins_home
+    ports:
+      - 8080:8080
+      - 50000:50000
+    expose:
+      - 8080
+      - 50000
+    networks:
+      - sonar
 
 networks:
   sonar:
@@ -24,4 +36,5 @@ volumes:
     external: false
   sonarqube_extensions:
     external: false
+
       
