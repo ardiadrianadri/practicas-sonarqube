@@ -1,0 +1,394 @@
+ Network practicas-sonarqube_sonar  Creating
+ Network practicas-sonarqube_sonar  Created
+ Container practicas-sonarqube-sonar-local-1  Creating
+ Container practicas-sonarqube-jenkins-local-1  Creating
+ Container practicas-sonarqube-sonar-local-1  Created
+ Container practicas-sonarqube-jenkins-local-1  Created
+Attaching to practicas-sonarqube-jenkins-local-1, practicas-sonarqube-sonar-local-1
+practicas-sonarqube-jenkins-local-1 exited with code 0
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:01 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube/temp
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:01 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:38867]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:01 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube/elasticsearch]: /opt/java/openjdk/bin/java -Xms4m -Xmx64m -XX:+UseSerialGC -Dcli.name=server -Dcli.script=./bin/elasticsearch -Dcli.libs=lib/tools/server-cli -Des.path.home=/opt/sonarqube/elasticsearch -Des.path.conf=/opt/sonarqube/temp/conf/es -Des.distribution.type=tar -cp /opt/sonarqube/elasticsearch/lib/*:/opt/sonarqube/elasticsearch/lib/cli-launcher/* org.elasticsearch.launcher.CliToolLauncher
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:01 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.n.Node] version[8.11.0], pid[87], build[tar/d9ec3fa628c7b0ba3d25692e277ba26814820b20/2023-11-04T10:04:57.184859352Z], OS[Linux/6.1.57-0-virt/aarch64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.9/17.0.9+9]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.n.Node] JVM home [/opt/java/openjdk], using bundled JDK [false]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.n.Node] JVM arguments [-Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=org.elasticsearch.preallocate, -XX:+UseG1GC, -Djava.io.tmpdir=/opt/sonarqube/temp, -XX:ErrorFile=/opt/sonarqube/logs/es_hs_err_pid%p.log, -Xlog:disable, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djna.tmpdir=/opt/sonarqube/temp, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=COMPAT, -Dcom.redhat.fips=false, -Xmx512m, -Xms512m, -XX:MaxDirectMemorySize=256m, -XX:+HeapDumpOnOutOfMemoryError, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.distribution.type=tar, --module-path=/opt/sonarqube/elasticsearch/lib, --add-modules=jdk.net, --add-modules=ALL-MODULE-PATH, -Djdk.module.main=org.elasticsearch.server]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-core]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [old-lucene-versions]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [rest-root]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-redact]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-security]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [apm]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:03 INFO  es[][o.e.p.PluginsService] loaded module [aggregations]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:04 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/opt/sonarqube/data (/dev/disk/by-label/data-volume)]], net usable_space [89.7gb], net total_space [97.8gb], types [ext4]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:04 INFO  es[][o.e.e.NodeEnvironment] heap size [512mb], compressed ordinary object pointers [true]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:04 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [7wbK_sWVSlacEtmrPSAdyA], cluster name [sonarqube], roles [data_cold, data, remote_cluster_client, master, data_warm, data_content, transform, data_hot, ml, data_frozen, ingest]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.x.s.Security] Security is disabled
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.t.n.NettyAllocator] creating NettyAllocator with the following configs: [name=unpooled, suggested_max_allocation_size=1mb, factors={es.unsafe.use_unpooled_allocator=null, g1gc_enabled=true, g1gc_region_size=4mb, heap_size=512mb}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.i.r.RecoverySettings] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.d.DiscoveryModule] using discovery type [single-node] and seed hosts providers [settings]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.n.Node] initialized
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.n.Node] starting ...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:38867}, bound_addresses {127.0.0.1:38867}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.c.c.ClusterBootstrapService] this node is locked into cluster UUID [HcOIBt0JT3idB8HK_sjNUg] and will not attempt further cluster bootstrapping
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.c.s.MasterService] elected-as-master ([1] nodes joined in term 6)[_FINISH_ELECTION_, {sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{5ednospCTSe2kt-npco4ag}{sonarqube}{127.0.0.1}{127.0.0.1:38867}{cdfhilmrstw}{8.11.0}{7000099-8500003} completing election], term: 6, version: 149, delta: master node changed {previous [], current [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{5ednospCTSe2kt-npco4ag}{sonarqube}{127.0.0.1}{127.0.0.1:38867}{cdfhilmrstw}{8.11.0}{7000099-8500003}]}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.c.s.ClusterApplierService] master node changed {previous [], current [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{5ednospCTSe2kt-npco4ag}{sonarqube}{127.0.0.1}{127.0.0.1:38867}{cdfhilmrstw}{8.11.0}{7000099-8500003}]}, term: 6, version: 149, reason: Publication{term=6, version=149}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.c.f.AbstractFileWatchingService] starting file watcher ...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.c.f.AbstractFileWatchingService] file settings service up and running [tid=30]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.c.c.NodeJoinExecutor] node-join: [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{5ednospCTSe2kt-npco4ag}{sonarqube}{127.0.0.1}{127.0.0.1:38867}{cdfhilmrstw}{8.11.0}{7000099-8500003}] with reason [completing election]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.h.AbstractHttpServerTransport] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.n.Node] started {sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{5ednospCTSe2kt-npco4ag}{sonarqube}{127.0.0.1}{127.0.0.1:38867}{cdfhilmrstw}{8.11.0}{7000099-8500003}{xpack.installed=true, rack_id=sonarqube}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.l.ClusterStateLicenseService] license [b61305cf-d20f-40f8-baec-563e8b9b3832] mode [basic] - valid
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.g.GatewayService] recovered [6] indices into cluster_state
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:05 INFO  es[][o.e.h.n.s.HealthNodeTaskExecutor] Node [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}] is selected as the current health node.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  es[][o.e.c.r.a.AllocationService] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]]])." previous.health="RED" reason="shards started [[metadatas][0]]"
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[WEB_SERVER] from [/opt/sonarqube]: /opt/java/openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-10.3.0.82913.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.2.222.jar org.sonar.server.app.WebServer /opt/sonarqube/temp/sq-process17974026537715520540properties
+practicas-sonarqube-sonar-local-1    | WARNING: A terminally deprecated method in java.lang.System has been called
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager has been called by org.sonar.process.PluginSecurityManager (file:/opt/sonarqube/lib/sonar-application-10.3.0.82913.jar)
+practicas-sonarqube-sonar-local-1    | WARNING: Please consider reporting this to the maintainers of org.sonar.process.PluginSecurityManager
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager will be removed in a future release
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:06 INFO  web[][o.s.s.a.TomcatHttpConnectorFactory] Starting Tomcat on port 9000
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 10.3.0.82913 / 6f8a6d03ea2dd721d4727be508574d541381d0a1
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /opt/sonarqube/data
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][o.s.d.DefaultDatabase] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:07 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 9.13.0.79967 / 0b84a168e0d212178722ac9865627046c515b212
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Clean as You Code / 2.2.2.656 / a856086cd01263bf020d3a6aa62763cb76b74120
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Configuration detection for Code Quality and Security / 1.3.0.654 / 63073f0270b2c4754afa58eb8b5ea04e2eebf1a4
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.12.0.4568 / e8b2821a05db57b79b8ae85e3db1571f5b744273
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.11.0.4708 / bbdf3696bc5c1964fa6e78171910f522f2206642
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.22.0.7057 / 24f70fff5c9e8b2ccdbae2067be30f1e89da3b35
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.3.0.1538 / 74a7798c7cea687c72ed9df40c93eb7ea2a58c49
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 7.27.1.33504 / fa8668548d47fc0fd7141a99c396bf4c92f8ed88
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 10.9.0.24449 / 11173bb4d804f5ee11817c30ab5cab080dd32170
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 2.18.0.2938 / f4087142b64b83c72808f8e0adb74ecec4717ba0
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.33.0.11274 / 89583886fa2f4951991f0550938d64572117fd0c
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 4.10.0.13725 / cbda7304ea2baf4ab491777866ee7247a741f910
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text Code Quality and Security / 2.7.1.1388 / null
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 9.13.0.79967 / 0b84a168e0d212178722ac9865627046c515b212
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.10.0.4108 / 34b16ba369117f6befc0b1e0866a069a80f6db2e
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 WARN  web[][o.s.a.s.w.WebService$Action] Description is not set on action api/monitoring/metrics
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 WARN  web[][o.s.a.s.w.WebService$Action] Since is not set on action api/monitoring/metrics
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/monitoring/metrics
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@69b3886f [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:08 INFO  web[][o.s.s.p.DetectPluginChange] No plugin change detected
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:09 INFO  web[][o.h.v.i.util.Version] HV000001: Hibernate Validator null
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:09 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AYy1W501cGa-uRyBClTb
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:09 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:09 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action saml/validation_init
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/issues/list
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/analysis_cache/get
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/push/sonarlint_events
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/dismiss_message/check
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@9530e1f [pattern=UrlPattern{inclusions=[/api/*], exclusions=[/api/v2/*]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@e14df83 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@e925939 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@3f509e08 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@2ee25c0b [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@6a27693 [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@1a65acef [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@21fed175 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@132051ae [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@64b95851 [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@4915137e [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@79c6bc71 [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@191508cb [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@1dc0d345 [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@8432880 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  web[][o.s.s.p.Platform] Web Server is operational
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[COMPUTE_ENGINE] from [/opt/sonarqube]: /opt/java/openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-10.3.0.82913.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.2.222.jar org.sonar.ce.app.CeServer /opt/sonarqube/temp/sq-process12500521434222926564properties
+practicas-sonarqube-sonar-local-1    | WARNING: A terminally deprecated method in java.lang.System has been called
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager has been called by org.sonar.process.PluginSecurityManager (file:/opt/sonarqube/lib/sonar-application-10.3.0.82913.jar)
+practicas-sonarqube-sonar-local-1    | WARNING: Please consider reporting this to the maintainers of org.sonar.process.PluginSecurityManager
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager will be removed in a future release
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][o.s.p.ProcessEntryPoint] Starting Compute Engine
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][o.s.d.DefaultDatabase] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:11 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:12 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:12 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:12 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is started
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:12 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:43:12 INFO  app[][o.s.a.SchedulerImpl] SonarQube is operational
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:24 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:24 INFO  app[][o.s.a.SchedulerImpl] Sonarqube has been requested to stop
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:24 INFO  app[][o.s.a.SchedulerImpl] Stopping [Compute Engine] process...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  app[][o.s.a.SchedulerImpl] Process[Compute Engine] is stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  app[][o.s.a.SchedulerImpl] Stopping [Web Server] process...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  web[][o.s.s.app.WebServer] Web Server stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  app[][o.s.a.SchedulerImpl] Process[Web Server] is stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  app[][o.s.a.SchedulerImpl] Stopping [ElasticSearch] process...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 143
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:25 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+practicas-sonarqube-sonar-local-1 exited with code 0
+ Network practicas-sonarqube_sonar  Creating
+ Network practicas-sonarqube_sonar  Created
+ Container practicas-sonarqube-jenkins-local-1  Creating
+ Container practicas-sonarqube-sonar-local-1  Creating
+ Container practicas-sonarqube-sonar-local-1  Created
+ Container practicas-sonarqube-jenkins-local-1  Created
+Attaching to practicas-sonarqube-jenkins-local-1, practicas-sonarqube-sonar-local-1
+practicas-sonarqube-jenkins-local-1 exited with code 0
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:34 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube/temp
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:34 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:44721]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:34 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube/elasticsearch]: /opt/java/openjdk/bin/java -Xms4m -Xmx64m -XX:+UseSerialGC -Dcli.name=server -Dcli.script=./bin/elasticsearch -Dcli.libs=lib/tools/server-cli -Des.path.home=/opt/sonarqube/elasticsearch -Des.path.conf=/opt/sonarqube/temp/conf/es -Des.distribution.type=tar -cp /opt/sonarqube/elasticsearch/lib/*:/opt/sonarqube/elasticsearch/lib/cli-launcher/* org.elasticsearch.launcher.CliToolLauncher
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:34 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.n.Node] version[8.11.0], pid[87], build[tar/d9ec3fa628c7b0ba3d25692e277ba26814820b20/2023-11-04T10:04:57.184859352Z], OS[Linux/6.1.57-0-virt/aarch64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.9/17.0.9+9]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.n.Node] JVM home [/opt/java/openjdk], using bundled JDK [false]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.n.Node] JVM arguments [-Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=org.elasticsearch.preallocate, -XX:+UseG1GC, -Djava.io.tmpdir=/opt/sonarqube/temp, -XX:ErrorFile=/opt/sonarqube/logs/es_hs_err_pid%p.log, -Xlog:disable, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djna.tmpdir=/opt/sonarqube/temp, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=COMPAT, -Dcom.redhat.fips=false, -Xmx512m, -Xms512m, -XX:MaxDirectMemorySize=256m, -XX:+HeapDumpOnOutOfMemoryError, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.distribution.type=tar, --module-path=/opt/sonarqube/elasticsearch/lib, --add-modules=jdk.net, --add-modules=ALL-MODULE-PATH, -Djdk.module.main=org.elasticsearch.server]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-core]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [old-lucene-versions]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [rest-root]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-redact]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-security]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [apm]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:36 INFO  es[][o.e.p.PluginsService] loaded module [aggregations]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:37 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/opt/sonarqube/data (/dev/disk/by-label/data-volume)]], net usable_space [89.7gb], net total_space [97.8gb], types [ext4]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:37 INFO  es[][o.e.e.NodeEnvironment] heap size [512mb], compressed ordinary object pointers [true]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:37 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [7wbK_sWVSlacEtmrPSAdyA], cluster name [sonarqube], roles [data_frozen, ingest, data_cold, data, remote_cluster_client, master, data_warm, data_content, transform, data_hot, ml]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.x.s.Security] Security is disabled
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.t.n.NettyAllocator] creating NettyAllocator with the following configs: [name=unpooled, suggested_max_allocation_size=1mb, factors={es.unsafe.use_unpooled_allocator=null, g1gc_enabled=true, g1gc_region_size=4mb, heap_size=512mb}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.i.r.RecoverySettings] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.d.DiscoveryModule] using discovery type [single-node] and seed hosts providers [settings]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.n.Node] initialized
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.n.Node] starting ...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:44721}, bound_addresses {127.0.0.1:44721}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.c.c.ClusterBootstrapService] this node is locked into cluster UUID [HcOIBt0JT3idB8HK_sjNUg] and will not attempt further cluster bootstrapping
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.c.s.MasterService] elected-as-master ([1] nodes joined in term 7)[_FINISH_ELECTION_, {sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{7Dy93lWdSZ6wKwOlExrkuA}{sonarqube}{127.0.0.1}{127.0.0.1:44721}{cdfhilmrstw}{8.11.0}{7000099-8500003} completing election], term: 7, version: 176, delta: master node changed {previous [], current [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{7Dy93lWdSZ6wKwOlExrkuA}{sonarqube}{127.0.0.1}{127.0.0.1:44721}{cdfhilmrstw}{8.11.0}{7000099-8500003}]}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.c.s.ClusterApplierService] master node changed {previous [], current [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{7Dy93lWdSZ6wKwOlExrkuA}{sonarqube}{127.0.0.1}{127.0.0.1:44721}{cdfhilmrstw}{8.11.0}{7000099-8500003}]}, term: 7, version: 176, reason: Publication{term=7, version=176}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.c.f.AbstractFileWatchingService] starting file watcher ...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.c.f.AbstractFileWatchingService] file settings service up and running [tid=30]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.c.c.NodeJoinExecutor] node-join: [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{7Dy93lWdSZ6wKwOlExrkuA}{sonarqube}{127.0.0.1}{127.0.0.1:44721}{cdfhilmrstw}{8.11.0}{7000099-8500003}] with reason [completing election]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.h.AbstractHttpServerTransport] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.n.Node] started {sonarqube}{7wbK_sWVSlacEtmrPSAdyA}{7Dy93lWdSZ6wKwOlExrkuA}{sonarqube}{127.0.0.1}{127.0.0.1:44721}{cdfhilmrstw}{8.11.0}{7000099-8500003}{xpack.installed=true, rack_id=sonarqube}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.l.ClusterStateLicenseService] license [b61305cf-d20f-40f8-baec-563e8b9b3832] mode [basic] - valid
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:38 INFO  es[][o.e.g.GatewayService] recovered [6] indices into cluster_state
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.h.n.s.HealthNodeTaskExecutor] Node [{sonarqube}{7wbK_sWVSlacEtmrPSAdyA}] is selected as the current health node.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.i.m.MapperService] reloading search analyzers
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  es[][o.e.c.r.a.AllocationService] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]]])." previous.health="RED" reason="shards started [[metadatas][0]]"
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[WEB_SERVER] from [/opt/sonarqube]: /opt/java/openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-10.3.0.82913.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.2.222.jar org.sonar.server.app.WebServer /opt/sonarqube/temp/sq-process1181807910465946921properties
+practicas-sonarqube-sonar-local-1    | WARNING: A terminally deprecated method in java.lang.System has been called
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager has been called by org.sonar.process.PluginSecurityManager (file:/opt/sonarqube/lib/sonar-application-10.3.0.82913.jar)
+practicas-sonarqube-sonar-local-1    | WARNING: Please consider reporting this to the maintainers of org.sonar.process.PluginSecurityManager
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager will be removed in a future release
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:39 INFO  web[][o.s.s.a.TomcatHttpConnectorFactory] Starting Tomcat on port 9000
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 10.3.0.82913 / 6f8a6d03ea2dd721d4727be508574d541381d0a1
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /opt/sonarqube/data
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.d.DefaultDatabase] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 9.13.0.79967 / 0b84a168e0d212178722ac9865627046c515b212
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Clean as You Code / 2.2.2.656 / a856086cd01263bf020d3a6aa62763cb76b74120
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Configuration detection for Code Quality and Security / 1.3.0.654 / 63073f0270b2c4754afa58eb8b5ea04e2eebf1a4
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.12.0.4568 / e8b2821a05db57b79b8ae85e3db1571f5b744273
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.11.0.4708 / bbdf3696bc5c1964fa6e78171910f522f2206642
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.22.0.7057 / 24f70fff5c9e8b2ccdbae2067be30f1e89da3b35
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.3.0.1538 / 74a7798c7cea687c72ed9df40c93eb7ea2a58c49
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 7.27.1.33504 / fa8668548d47fc0fd7141a99c396bf4c92f8ed88
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 10.9.0.24449 / 11173bb4d804f5ee11817c30ab5cab080dd32170
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 2.18.0.2938 / f4087142b64b83c72808f8e0adb74ecec4717ba0
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.33.0.11274 / 89583886fa2f4951991f0550938d64572117fd0c
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 4.10.0.13725 / cbda7304ea2baf4ab491777866ee7247a741f910
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text Code Quality and Security / 2.7.1.1388 / null
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 9.13.0.79967 / 0b84a168e0d212178722ac9865627046c515b212
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:40 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.10.0.4108 / 34b16ba369117f6befc0b1e0866a069a80f6db2e
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 WARN  web[][o.s.a.s.w.WebService$Action] Description is not set on action api/monitoring/metrics
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 WARN  web[][o.s.a.s.w.WebService$Action] Since is not set on action api/monitoring/metrics
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/monitoring/metrics
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@6793f752 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:41 INFO  web[][o.s.s.p.DetectPluginChange] No plugin change detected
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:42 INFO  web[][o.h.v.i.util.Version] HV000001: Hibernate Validator null
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:42 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AYy1W501cGa-uRyBClTb
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:42 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:42 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action saml/validation_init
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/issues/list
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/analysis_cache/get
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/push/sonarlint_events
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/dismiss_message/check
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@3823b400 [pattern=UrlPattern{inclusions=[/api/*], exclusions=[/api/v2/*]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@5260afd8 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@6f4ad93b [pattern=UrlPattern{inclusions=[/api/components/update_key, ...], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@72637fa [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@228000aa [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@7549754d [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@4cf3e9de [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@7a5c8e5d [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@6c8815b5 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@3110e4c [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@67912d1c [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@1a63b353 [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@3fbfbcc3 [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@58fb44ec [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@66a6a1a3 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  web[][o.s.s.p.Platform] Web Server is operational
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:43 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[COMPUTE_ENGINE] from [/opt/sonarqube]: /opt/java/openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-10.3.0.82913.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.2.222.jar org.sonar.ce.app.CeServer /opt/sonarqube/temp/sq-process12724558273691760125properties
+practicas-sonarqube-sonar-local-1    | WARNING: A terminally deprecated method in java.lang.System has been called
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager has been called by org.sonar.process.PluginSecurityManager (file:/opt/sonarqube/lib/sonar-application-10.3.0.82913.jar)
+practicas-sonarqube-sonar-local-1    | WARNING: Please consider reporting this to the maintainers of org.sonar.process.PluginSecurityManager
+practicas-sonarqube-sonar-local-1    | WARNING: System::setSecurityManager will be removed in a future release
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][o.s.p.ProcessEntryPoint] Starting Compute Engine
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][o.s.d.DefaultDatabase] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:44 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:45 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:45 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is started
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:45 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:44:45 INFO  app[][o.s.a.SchedulerImpl] SonarQube is operational
+practicas-sonarqube-jenkins-local-1  | Running from: /usr/share/jenkins/jenkins.war
+practicas-sonarqube-jenkins-local-1  | webroot: /var/jenkins_home/war
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:21.767+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:21.818+0000 [id=1]	WARNING	o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:21.855+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-10.0.18; built: 2023-10-27T01:59:58.245Z; git: 8545fd9bf4cd0d0838f626b405fd4963441546b7; jvm 17.0.9+9
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:22.386+0000 [id=1]	INFO	o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:22.443+0000 [id=1]	INFO	o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:23.282+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:23.453+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started w.@378bd86d{Jenkins v2.426.2,/,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:23.458+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started ServerConnector@4f67eb2a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:23.469+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started Server@272ed83b{STARTING}[10.0.18,sto=0] @1969ms
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:23.471+0000 [id=25]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:23.983+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:24.587+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:30.354+0000 [id=30]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:30.392+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:30.502+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:31.042+0000 [id=32]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:31.912+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:31.912+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:31.959+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:31.977+0000 [id=30]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:32.053+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:32.212+0000 [id=24]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:50:32.629+0000 [id=47]	WARNING	h.m.DownloadService$Downloadable#updateNow: No tool installer metadata found for jenkins.plugins.nodejs.tools.MirrorNodeJSInstaller
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.843+0000 [id=26]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.847+0000 [id=26]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped Server@272ed83b{STOPPING}[10.0.18,sto=0]
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  app[][o.s.a.SchedulerImpl] Sonarqube has been requested to stop
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  app[][o.s.a.SchedulerImpl] Stopping [Compute Engine] process...
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.849+0000 [id=26]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped ServerConnector@4f67eb2a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.850+0000 [id=26]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.884+0000 [id=26]	INFO	jenkins.model.Jenkins$16#onAttained: Started termination
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.890+0000 [id=26]	INFO	h.p.b.global.Lifecycle#shutdown: Shutdown complete - Global TimeOut ScheduledExecutorService had 0 tasks pending
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.920+0000 [id=26]	INFO	jenkins.model.Jenkins$16#onAttained: Completed termination
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.920+0000 [id=26]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.958+0000 [id=26]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.965+0000 [id=26]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.974+0000 [id=26]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.974+0000 [id=26]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+practicas-sonarqube-jenkins-local-1  | 2023-12-31 10:51:10.975+0000 [id=26]	INFO	o.e.j.s.handler.ContextHandler#doStop: Stopped w.@378bd86d{Jenkins v2.426.2,/,null,STOPPED}{/var/jenkins_home/war}
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  app[][o.s.a.SchedulerImpl] Stopping [Web Server] process...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:10 INFO  app[][o.s.a.SchedulerImpl] Process[Compute Engine] is stopped
+practicas-sonarqube-jenkins-local-1 exited with code 0
+practicas-sonarqube-jenkins-local-1 exited with code 143
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  web[][o.s.s.app.WebServer] Web Server stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  app[][o.s.a.SchedulerImpl] Process[Web Server] is stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  app[][o.s.a.SchedulerImpl] Stopping [ElasticSearch] process...
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 143
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+practicas-sonarqube-sonar-local-1    | 2023.12.31 10:51:11 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+practicas-sonarqube-sonar-local-1 exited with code 0

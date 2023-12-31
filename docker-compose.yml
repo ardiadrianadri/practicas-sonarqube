@@ -14,7 +14,9 @@ services:
     networks:
       - sonar
   jenkins-local:
-    image: jenkins/jenkins:lts-jdk17
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - /Users/aferreres/projects/personal/jenkins:/var/jenkins_home
     ports:
